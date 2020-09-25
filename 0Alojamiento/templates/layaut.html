@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="En este sitio web podras encontrar los proyectos almacenados de musica del grado Noveno 2020, Colegio Colsubsidio Maipore "/>
+    <meta name="keywords" content="Proyectos, Español, Musica, Colegio Colubsidio Maipore, 2020, Cultura y expresion, Aplicacion web, python3, flask, mysql, html5, css3, web, Colsubsidio, Colegio, STEAM "/>
+    <meta name="author" content="dmvnicolas@gmail.com" />
+    <meta name="copyright" content="dmvnicolas@gmail.com" />
+    <script src="https://kit.fontawesome.com/9d283a9704.js" crossorigin="anonymous"></script>
+    <link rel="stylesheet" href="{{url_for('static', filename='css/styles286.css' )}}">
+    <link href="https://fonts.googleapis.com/css2?family=Roboto&display=swap" rel="stylesheet">
+    <title>Noveno Proyectos</title>
+</head>
+<body>
+    <div class="container"></div>
+    <div class="nav_bar">
+        <nav>
+            <ul>
+                <li>
+                    <img src="{{url_for('static', filename='img/logo.png' )}}" alt="imagen">
+                </li>
+                <li>
+                    <a href="{{url_for('home')}}">PROYECTOS</a>
+                </li>
+                <li>
+                    <a href="{{url_for('add')}}">AÑADIR PROYECTO</a>
+                </li>
+                <li>
+                    <a href="{{url_for('informacion')}}">INFORMACION</a>
+                </li>
+                <li>
+                    <a href="{{url_for('contacto')}}">CONTACTO</a>
+                </li>
+            </ul>
+        </nav>
+    </div>
+    <div class="margen">
+    {%for x in range(0,6)%}
+    <div class="divisor"></div>
+    {%endfor%}
+    {%block body%}
+    {%endblock%}
+    </div>
+    {%for x in range(0,15)%}
+    <div class="divisor"></div>
+    {%endfor%}
+
+    <footer>
+        <section class="sec">
+            <div class="sec2">
+                <h3>Navegar</h3>
+                <div class="divisor"></div>
+                <a href="{{url_for('home')}}">Proyectos</a>
+            </div>
+            <div class="sec2">
+                <a href="{{url_for('add')}}">Añadir Proyecto</a>
+            </div>
+            <div class="sec2">
+                <a href="{{url_for('informacion')}}">Informacion</a>
+            </div>
+            <div class="sec2">
+                <a href="{{url_for('contacto')}}">Contacto</a>
+            </div>
+        </section>
+        <section class="sec">
+            <div class="sec2">
+                <h3>Referencias</h3>
+                <div class="divisor"></div>
+                {%if enlace==True%}
+                <a href="https://www.python.org/"target="_blank">Python3 con Flask</a>
+                {%else%}
+                <a href="https://flask.palletsprojects.com/en/1.1.x/"target="_blank">Flask con Python3</a>
+                {%endif%}
+            </div>
+            <div class="sec2">
+                {%if enlace==True%}
+                <a href="https://developer.mozilla.org/es/docs/HTML/HTML5"target="_blank">Htm5 y Css3</a>
+                {%else%}
+                <a href="https://developer.mozilla.org/es/docs/Web/CSS"target="_blank">Css3 y Html5</a>
+                {%endif%}
+            </div>
+            <div class="sec2">
+                {%if enlace==True%}
+                <a href="https://www.sqlite.org/index.html"target="_blank">Sqlite3 y SqlAlchemy</a>
+                {%else%}
+                <a href="https://www.sqlalchemy.org/"target="_blank">SqlAlchemy y Sqlite3</a>
+                {%endif%}
+            </div>
+            <div class="sec2">
+                <a href="https://www.heroku.com/"target="_blank">Heroku</a>
+            </div>
+        </section>
+        <section class="sec">
+            <h3>ARROZ</h3>
+            <div class="sec2">
+                <a href="https://www.ticbeat.com/salud/11-beneficios-arroz-salud/#:~:text=Mejora%20el%20metabolismo%3A%20El%20arroz,funcionamiento%20adecuado%20de%20tus%20%C3%B3rganos."target="_blank"id="slash">El arroz es lo mejor que puede existir en esta vida, el arroz es vida el arroz es amor puro y conciso, hace 7000 años se dio a conocer este sagrado alimento en china, es por eso que ese pais esta tan desarrollado, Estados Unidos tambien descubrio el arroz y por eso es tan grande, debemos comer arroz y interactuar con el arroz, el arroz cura tu hambre, absorbe el agua de los celulares cuando se mojan, el arroz es tu mejor compañero a la hora de conseguir novia, el arroz es lo mejor que hay en esta vida. Repite conmigo: "Arroz, Arroz, Arroz, Arroz, Arroz, Arroz, Arroz, Arroz, Arroz, Arroz, Arroz, Arroz, Arroz, Arroz, Arroz, Arroz, Arroz, Arroz, Arroz, Arroz, Arroz, Arroz, Arroz, Arroz.</a>
+            </div>
+        </section>
+    </footer>
+    <div class="box-c">
+        <i class="far fa-copyright">Nicolas David Moreno Villanueva, Todos los derechos reservados 2020</i>
+</div>
+</body>
+</html>

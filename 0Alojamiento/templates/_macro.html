@@ -1,0 +1,16 @@
+{% macro error(value)%}
+<div class="alerta">
+    <h2>¡Oouch! :C</h2>
+    <p>{{value}}</p>
+    <hr>
+    <p class="mb-0">enlace de redireccion para ir al inicio, <<<a href="{{url_for('home')}}">INICIO</a>>>.</p>
+</div>
+{%endmacro%}
+{% macro done(value, value2)%}
+<div class="alerta">
+    <h2>¡Bien!</h2>
+    <p>{{value}}</p>
+    <hr>
+    <p class="mb-0">{{value2}}</p>
+</div>
+{%endmacro%}

@@ -1,0 +1,90 @@
+{%extends "layaut.html"%}
+{%block body%}
+<h1 class="titu">Crear proyecto</h1>
+<div class="Wrapper">
+    <form method="POST" action="{{url_for('add')}}" enctype="multipart/form-data">
+        {%for x in range(1,4)%}
+        <div class="divisor"></div>
+        {%endfor%}
+
+        <label class="Input-label">TITULO</label>
+        <div class="divisor"></div>
+        <input type="text" name="title" placeholder="Ingresa el titulo de tu proyecto." class="Input-text"> 
+        <p class="limit">Longitud "maxima" de caracteres: 100</p>
+        <p class="limit">Obligatorio: Si</p>
+
+        {%for x in range(1,4)%}
+        <div class="divisor"></div>
+        {%endfor%}
+
+        <label class="Input-label">INTEGRANTE 1</label>
+        <div class="divisor"></div>
+        <input type="text" name="name1" placeholder="Ingresa el nombre completo del primer integrante del proyecto" class="Input-text">
+        <p class="limit">Longitud "maxima" de caracteres: 50</p>
+        <p class="limit">Obligatorio: Si</p>
+
+        {%for x in range(1,4)%}
+        <div class="divisor"></div>
+        {%endfor%}
+
+        <label class="Input-label">INTEGRANTE 2</label>
+        <div class="divisor"></div>
+        <input type="text" name="name2" placeholder="Ingresa el nombre completo del segundo integrante del proyecto."class="Input-text">
+        <p class="limit">Longitud "maxima" de caracteres: 50</p>
+
+        {%for x in range(1,4)%}
+        <div class="divisor"></div>
+        {%endfor%}
+
+        <label class="Input-label">INTEGRANTE 3</label>
+        <div class="divisor"></div>
+        <input type="text" name="name3" placeholder="Ingresa el nombre completo del tercer integrante del proyecto."class="Input-text">
+        <p class="limit">Longitud "maxima" de caracteres: 50</p>
+
+        {%for x in range(1,4)%}
+        <div class="divisor"></div>
+        {%endfor%}
+
+        <label class="Input-label">INTEGRANTE 4</label>
+        <div class="divisor"></div>
+        <input type="text" name="name4" placeholder="Ingresa el nombre completo del cuarto integrante del proyecto."class="Input-text">
+        <p class="limit">Longitud "maxima" de caracteres: 50</p>
+
+        {%for x in range(1,4)%}
+        <div class="divisor"></div>
+        {%endfor%}
+
+        <label class="Input-label">DESCRIPCION</label>
+        <div class="divisor"></div>
+        <textarea type="text" name="content1" placeholder="Ingresa la descripcion de tu proyecto."class="Input-text" id="Input-text2"></textarea>
+        <p class="limit">Longitud "minima" de caracteres: 50</p>
+        <p class="limit">Longitud "maxima" de caracteres: 800</p>
+        <p class="limit">Obligatorio: Si</p>
+
+        {%for x in range(1,4)%}
+        <div class="divisor"></div>
+        {%endfor%}
+
+        <label class="Input-label">IMAGEN-URL</label>
+        <div class="divisor"></div>
+        <input type="url" name="imagen" placeholder="Ingresa la url de tu imagen"class="Input-text"></input>
+        <p class="limit">Obligatorio: Si</p> 
+
+        {%for x in range(1,4)%}
+        <div class="divisor"></div>
+        {%endfor%}
+
+        <label class="Input-label">DIRECCION</label>
+        <div class="divisor"></div>
+        <input type="url" name="url" placeholder="Ingresa la url que lleva a tu proyecto"class="Input-text">
+        <p class="limit">Obligatorio: Si</p>
+
+        {%for x in range(1,6)%}
+        <div class="divisor"></div>
+        {%endfor%}
+        <div class="centro">
+            <button class="enviar" value="UPLOAD"><h2>CREAR PROYECTO</h2></button>
+        </div>
+    </form>
+</div>
+{%endblock%}

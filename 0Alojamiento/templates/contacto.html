@@ -1,0 +1,32 @@
+{%extends "layaut.html"%}
+{%block body%}
+<section class="sec">
+    <h3 class="titu">Contactanos</h3>
+    {%for x in range(1,4)%}
+    <div class="divisor"></div>
+    {%endfor%}
+    <div class="sec21">
+        <form method="POST" action="{{url_for('contacto')}}"class="formm">
+
+            <label class="Input-label">Nombre</label>
+            <div class="divisor"></div>
+            <input type="text" name="namef"  class="Input-text">
+            <div class="divisor"></div>
+            <div class="divisor"></div>
+            <label class="Input-label">E-mail</label>
+            <div class="divisor"></div>
+            <input type="email" name="emailf" class="Input-text">
+            <div class="divisor"></div>
+            <div class="divisor"></div>
+            <label class="Input-label">Mensaje</label>
+            <div class="divisor"></div>
+            <textarea type="text" name="contentf"class="Input-text"></textarea>
+            <div class="divisor"></div>
+            <div class="divisor"></div>
+            <div class="centro">
+                <button class="enviar"><h1>Enviar</h1></button>
+            </div>
+        </form>
+    </div>
+</section>
+{%endblock%}

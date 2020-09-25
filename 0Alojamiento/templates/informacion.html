@@ -1,0 +1,48 @@
+{%extends "layaut.html"%}
+{%block body%}
+<h1 class="titu">Informacion</h1>
+<article class="bac">
+    {%for x in range(1,4)%}
+    <div class="divisor"></div>
+    {%endfor%}
+    <div class="infor">
+        <section class="infor2">
+            <h1>¿Adaptable?</h1>
+            <p class="infor3">Esta pagina no es responsive, lo cual no se adapta a algunos tamaños de dispositivos, en un futuro se planea que esto cambie, lo cual esta pagina sera adaptable.</p>
+            <h1>¿Como añadir un proyecto?</h1>
+             <p class="infor3">Para añadir un proyecto podemos dirigirnos a la parte de "<a href="{{url_for('add')}}">AÑADIR PROYECTO</a>", en esta seccion se mostrara un formulario donde ingresaremos el titulo del proyecto, en la parte de integrantes, si no son 4 integrantes, simplemente dejar en blanco los faltantes, despues tendras que llenar lo que es la descripcion de tu proyecto, esta descripcion es breve y concisa, puedes guiarte con la informacion del "<a href="#slash">arroz</a>" ubicada debajo de la pagina o intentar rondar entre los 500 caracteres, a continuacion añadiras el enlace de la imagen que quieras añadir, ademas de la url que lleva a tu proyecto, siempre revisar las letras pequeñas, estas nos indican los requisitos de cada campo.</p>
+        </section>
+        <img src="{{url_for('static', filename='img/E90.jpg')}}" class="lol"alt="lol">
+    </div>
+    {%for x in range(1,6)%}
+    <div class="divisor"></div>
+    {%endfor%}
+    <div class="infor5">
+        <section class="infor2">
+            <img src="{{url_for('static', filename='img/error-t.jpg')}}" class="lol" id="con"alt="lol">
+            <h1>Error 1904</h1>
+            <p class="infor3">Este comun error se ocasiona cuando nosotros intentamos añadir un proyecto, pusimos toda nuestra informacion del proyecto y lamentablemente se ocasiono este error, este error tiene solucion y es que en la parte de abajo de cada campo hay unos requerimientos, fijemonos mas bien el requerimiento que dice "obligatorio", si nosotros no llenamos un campo obligatorio nos saldra este error.</p>
+            <h1>Error 2376</h1>
+            <p class="infor3">Este es ya mas raro de poder encontrarlo y tambien tiene que ver con los requerimentos debajo de cada campo, y este tiene que ver con la longitud maxima de caracteres seleccionados, y es que si podemos ver hay algunos campos que lo requieren como los nombres que permiten hasta 50 caracteres o la descripcion que permite 800.</p>
+            <h1>Error 5489</h1>
+            <p class="infor3">Este error corresponde a la longitud minima de caracteres, lo contrario a el anterior, este solo se encuentra presente cuando vamos a escribir nuestra descripcion, la cual necesita minimamente 50 caracteres de informacion, asi que no te preocupes, simplemente alarga tu descripcion.</p>
+            <h1>Error 404</h1>
+            <p class="infor3">Famoso error 404, este error sucede cuando nosotros intentamos acceder desde esta pagina a una ruta que no esta definida o no existe, si acaso te sale este error y estas seguro de estar en una ruta existente porfavor contactarnos desde "<a href="{{url_for('contacto')}}">CONTACTO</a>", estaremos encatados de responderte :3.
+            <h1>Demas errores</h1>
+            <p class="infor3">Si se da el caso de que sale un error inesperado, porfavor contactarnos a traves de "<a href="{{url_for('contacto')}}">CONTACTO</a>", le responderemos inmediatamente, de preferencia comunicar los detalles del error y si es posible mandar por el correo "<a href="https://mail.google.com/mail/u/0/#inbox">dmvnicolas@gmail.com</a>"  una imagen respecto al error.</p>
+        </section>
+    </div>
+    {%for x in range(1,6)%}
+    <div class="divisor"></div>
+    {%endfor%}
+    <div class="infor4">
+        <img src="{{url_for('static', filename='img/maipore.jpg')}}" class="lol"alt="lol">
+        <section class="infor2">
+            <h1>¿Quienes somos?</h1>
+            <p class="infor3">Nosotros pertenecemos al Colegio Colsubsidio Maipore, ubicado en Cundinamarca Colombia, somos grado Noveno del 2020, puedes ingresar a la pagina de colsubsidio como <a href="https://www.colsubsidio.com/"target="_blank">https://www.colsubsidio.com/</a> o ingresar a la pagina de nuestro colegio en Colsubsidio Maipore<a href="https://www.colsubsidio.com/afiliados/educacion/colegios/colegio-colsubsidio-maipore.html"target="_blank">https://www.colsubsidio.com/afiliados/educacion/colegios/colegio-colsubsidio-maipore.html</a></p>
+            <h1>¿Quien soy?</h1>
+            <p class="infor3">Soy Nicolas David Moreno, perteneciente a dicha institucion educativa (Colegio Colsubsidio Maipore), grado Noveno, tengo 14 años, puedes contactarme atraves de mi correo institucional o personal, dependiendo de tus intereses "<a href="https://mail.google.com/mail/u/0/#inbox"target="_blank">nicolas.morenovi@colsubsidio.edu.co</a>" como institucional o "<a href="https://mail.google.com/mail/u/0/#inbox"target="_blank">dmvnicolas@gmail.com</a>" como personal, si tienes dudas respecto a la pagina o errores que quieras comentar puedes comentarlo en la seccion de " <a href="{{url_for('contacto')}}">CONTACTO</a>"</p>
+        </section>
+    </div>
+</article>
+{%endblock%} 

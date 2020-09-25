@@ -1,0 +1,5 @@
+{%extends "layaut.html"%}
+{%block body%}
+{%from "_macro.html" import error %}
+{{error("5489:El campo 'DESCRIPCION', no contiene la longitud minima de caracteres (50). Intente otra vez llenar el formulario.")}}
+{%endblock%}

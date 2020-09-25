@@ -1,0 +1,38 @@
+{%extends "layaut.html"%}
+{%block body%}
+<h1 class="titu">Proyectos</h1>
+{%for x in range(1,4)%}
+<div class="divisor"></div>
+{%endfor%}
+{%for x in proyectos%}
+<div class="proyectt">
+    <div>
+        <div class="tal5">
+            <img src="{{x.logo}}" class="lol"alt="lol">
+        </div>
+        <div class="tal">
+            <h3>INTEGRANTES:</h3>
+            <p>{{x.name1}}</p>
+            <p>{{x.name2}}</p>
+            <p>{{x.name3}}</p>
+            <p>{{x.name4}}</p>
+        </div>
+    </div>
+    <div>
+        <div class="tal2">
+            <h2>{{x.title}}</h2>
+        </div>
+        <div class="tal3">
+            <p>{{x.content1}}</p>
+        </div>
+        <div class="divisor"></div>
+        <div class="divisor"></div>
+        <div class="divisor"></div>
+        <a href="{{x.url}}" target="_blank" class="boto"><div class="tal4"><h3>IR AL PROYECTO</h3></div></a>
+    </div>
+</div>
+{%for x in range(0,3)%}
+<div class="divisor"></div>
+{%endfor%}
+{%endfor%}
+{%endblock%}
